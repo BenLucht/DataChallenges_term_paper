@@ -1,0 +1,29 @@
+name: deploy_streamlit_dev
+
+on:
+  # Triggers the workflow on push events but only for the main branch
+  push:
+    branches: [ dev ]
+
+  # Allows to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    # only run if commit message contains 'deploy'
+    if: "contains(github.event.head_commit.message, 'deploy')"
+    
+    steps:
+      - name: executing remote ssh commands
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          # go to srv and run deployment script on server (quietly)
+          script: |
+            cd /srv/dev
+            bash deploy.sh &> out.log

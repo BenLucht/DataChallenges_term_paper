@@ -1,0 +1,17 @@
+matplotlib==3.4.2
+numpy==1.20.3
+pandas==1.2.4
+scikit-learn==0.24.2
+scipy==1.6.3
+seaborn==0.11.1
+streamlit==0.82.0
+tslearn==0.5.2
+sktime==0.8.1
+tsfresh==0.18.0
+impyute==0.0.8
+pyts2==0.4.8
+pyts==0.12.0
+seglearn==1.2.3
+stumpy==1.9.2
+pyflux==0.4.15
+cesium==0.9.12

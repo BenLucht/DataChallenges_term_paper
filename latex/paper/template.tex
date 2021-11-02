@@ -1,0 +1,94 @@
+\documentclass[12pt]%[english]
+{article}
+
+\usepackage{graphicx,subfigure}
+\usepackage{microtype}
+\usepackage[nonumberlist, acronym, toc, section]{glossaries}
+\usepackage{cite} 
+
+
+%% additional packages and commands
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% to format pseudo code
+\usepackage{algorithm}% http://ctan.org/pkg/algorithms
+\usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
+
+% make numbers in circles: https://tex.stackexchange.com/questions/7032/good-way-to-make-textcircled-numbers
+\usepackage{tikz}
+\usetikzlibrary{shapes.misc}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+% alternative to that: \raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {8}}}
+
+\usepackage{pdfpages} % to embed pdfs
+\usepackage{multicol}
+
+% for code snippets
+\usepackage{minted}
+\usepackage{xcolor}
+\definecolor{code-bg}{rgb}{0.95,0.95,0.95}
+
+\usepackage{wrapfig}
+
+\usepackage{url}
+
+\input{glossary}
+
+\begin{document}
+
+\begin{titlepage}
+\input{titlepage}
+\end{titlepage}
+
+\newpage\thispagestyle{empty}~ %empty page
+\newpage 
+
+\begin{abstract}
+\input{sections/00_abstract}
+\end{abstract}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Problem Description}
+\label{sec:problem_description}
+\input{sections/01_problem_description}
+
+\section{Data Set Description}
+\label{sec:data_description}
+\input{sections/02_data_set_description}
+
+\section{Description of Specific Methods and Algorithms}
+\label{sec:method}
+\input{sections/03_main/index}
+
+\section{Web Frontend and User Manual}
+\label{sec:frontend_description}
+\input{sections/04_frontend_manual}
+
+\section{Conclusion}
+\input{sections/05_conclusion}
+
+\newpage
+
+%print glossary
+\printglossary[style=altlist,title=Glossary]
+ 
+%print abbreviations
+\printglossary[type=\acronymtype,style=long]
+ 
+%print symbols
+\printglossary[type=symbolslist,style=long]
+
+\newpage
+
+\bibliography{bib}
+\bibliographystyle{unsrt}
+
+\end{document}

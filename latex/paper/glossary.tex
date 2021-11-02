@@ -1,0 +1,53 @@
+\newglossary[slg]{symbolslist}{syi}{syg}{Symbols}
+
+\makeglossaries
+
+%commands for symbols
+\newglossaryentry{symb:Pi}{
+name=$\pi$,
+description={You know it.},
+sort=symbolpi, type=symbolslist
+}
+\newglossaryentry{symb:Phi}{
+name=$\varphi$,
+description={At vero eos et accusam et justo duo dolores et ea rebum..},
+sort=symbolphi, type=symbolslist
+}
+\newglossaryentry{symb:Lambda}{
+name=$\lambda$,
+description={Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.},
+sort=symbollambda, type=symbolslist
+}
+
+%commands for abbreviations
+\newacronym{MS}{MS}{Microsoft}
+\newacronym{CD}{CD}{Compact Disc}
+\newacronym{sklearn}{sklearn}{Scikit-Learn}
+
+\newacronym{DI}{DI}{Dunn Index}
+\newacronym{CH}{CH}{Calinski-Harabasz Index}
+\newacronym{DB}{DB}{Davies-Bouldin Index}
+\newacronym{SI}{SI}{Silhouette Score}
+\newacronym{GS}{GS}{Gap Statistic}
+\newacronym{VRC}{VRC}{Variance Ratio Criterion}
+\newacronym{t-SNE}{t-SNE}{t-distributed Stochastic Neighbor Embedding}
+
+
+% ...
+
+%abbreviations and glossary combined
+\newacronym{AD}{AD}{Active Directory\protect\glsadd{glos:AD}}
+%\newacronym{sklearn}{sklearn}{Scikit-Learn\protect\glsadd{glos:sklearn}}
+ 
+% ... 
+ 
+%glossary commands
+
+\newglossaryentry{glos:AD}{
+name=Active Directory,
+description={At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet}
+}
+
+\newglossaryentry{glos:F}{name=File, description={An arbitrary file}}
+
+% ...

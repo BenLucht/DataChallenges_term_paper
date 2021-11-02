@@ -1,0 +1,51 @@
+\documentclass[aspectratio=43]{beamer}
+%
+% Choose how your presentation looks.
+%
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%
+\mode<presentation>
+{
+  \usetheme{default}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+
+\title[Data Challenges]{Data Challenges}
+\author{B.L.}
+\institute{Goethe Universität Frankfurt}
+\date{22/06/2021}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\section{Algorithm}
+\label{sec:algo}
+\input{slides/001_algorithm_1}
+
+\section{Data Set}
+\label{sec:data}
+\input{slides/101_dataset_1}
+
+\section{Evaluation}
+\label{sec:eval}
+\input{slides/201_evaluation_1}
+
+\section{Conclusion}
+\label{sec:conclustion}
+\input{slides/301_conclustion_1}
+
+\end{document}
