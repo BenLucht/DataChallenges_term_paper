@@ -198,6 +198,7 @@ fig = get_model(df, X_scaled, 0.19, 3)
 st.plotly_chart(fig)
 
 
+# Excercise 2:
 
 # st.write(print_properties(df))
 # df = df.head(10000)
